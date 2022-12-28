@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_28_212824) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_28_215423) do
   create_table "lists", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
@@ -20,10 +20,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_28_212824) do
   create_table "pets", force: :cascade do |t|
     t.string "name"
     t.integer "age"
-    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "list_id"
+    t.string "species"
   end
 
 end
