@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_28_202236) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_28_212824) do
   create_table "lists", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "pet_id"
   end
 
   create_table "pets", force: :cascade do |t|
@@ -24,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_28_202236) do
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "list_id"
   end
 
 end
