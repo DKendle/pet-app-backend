@@ -36,6 +36,7 @@ class PetsController < ApplicationController
   # DELETE /pets/1
   def destroy
     @pet.destroy
+    render json: {message: "Pet Profile Successfully Deleted!"}
   end
 
   private
